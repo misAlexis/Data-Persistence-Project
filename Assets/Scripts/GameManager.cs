@@ -37,6 +37,7 @@ public class GameManager : MonoBehaviour
             }
         }
         UpdateHighScoreDisplay();
+        ScoreText.text = $"Score : {MainManager.Instance.ActivePlayerName} : 0";
     }
 
     // Update is called once per frame
@@ -70,7 +71,7 @@ public class GameManager : MonoBehaviour
 
         if (m_Points > MainManager.Instance.HighScore)
             UpdateHighScore();  
-        ScoreText.text = $"Score : {m_Points}";
+        ScoreText.text = $"Score : {MainManager.Instance.ActivePlayerName} : {m_Points}";
     }
 
     public void GameOver()
